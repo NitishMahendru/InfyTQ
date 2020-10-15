@@ -1,0 +1,18 @@
+Assignment 24
+Write a Python program to generate the next 15 leap years starting from a given year. Populate the leap years into a list and display the list.4
+
+def form_triangle(num1,num2,num3):
+
+    success="Triangle can be formed"
+    failure="Triangle can't be formed"
+
+    if((num1 + num2 >= num3) or (num1 + num3>=num2) or (num2 + num3>=num1)):
+        return success
+    #Use the following messages to return the result wherever necessary
+    else:
+        return failure
+        
+num1=3
+num2=3
+num3=5
+form_triangle(num1, num2, num3)        
