@@ -1,0 +1,84 @@
+Basic Commands
+
+insert(pos,element) method of Python insert items in between lists
+append() method of Python adds item at end of the list
+pop(pos) method of Python list removes item from indes(pos)
+Note: Capacity will be decreased whenever remaining number of elements fall below certain value
+
+Python  Class
+
+Classes = All classes have a function called __init__(), which is always executed when the class is being initiated.
+'initialize' refers to assigning values to variables
+'Self' points to current object/variable in use.
+
+____________________________________________________________________________________
+
+class Computer:
+	def config(comp):
+		print("dell");
+Computer.config(comp1)  #calls thefunction or method
+comp1.config() #same as above
+
+__init__  : initialises variables , used to present variables or define variables 
+____________________________________________________________________________________
+
+class Computer:
+	def __init__(self,cpu,ram): #init provides variables.
+		self.cpu=cpu;
+		self.ram=ram;
+	
+	def config(self):
+		print('Config is:', self.cpu, self.ram); #self.cpu >> self used to refer to objects.
+comp1=Computer('i5',16);
+comp2=Computer('Rz 13',8);
+
+comp1.config();
+comp2.config();
+
+print(comp1) just prints the adress.
+____________________________________________________________________________________
+
+Simplest example for basic list operation is 
+
+first_list=[1,2,3]
+second_list=[]
+second_list.append(first_list.pop(2))
+print(second_list)
+
+Answer : [3]
+______________________________________________________________________________________
+
+OPERATIONS ON LINKED LIST
+
+display()
+1. Call the head node as temp
+2. While temp is not None,
+   a. Display temp’s data
+   b. Make the next node as temp
+
+add(data)
+
+1. Create a new node with the data
+2. If the linked list is empty (head node is not referring to any other node), 
+   make the head node and the tail node refer to the new node
+3. Otherwise,
+   a. Make the tail node’s link refer to new node
+   b. Call the new node as tail node
+
+class Node:
+    def __init__(self,data):  #add data variable
+        self.__data=data
+        self.__next=None
+    
+    def get_data(self):  #get the first item
+        return self.__data
+    
+    def set_data(self,data): #make the first item at index 1
+        self.__data=data
+    
+    def get_next(self): #get next item on list
+        return self.__next
+    
+    def set_next(self,next_node): #set next item on the subsequent node
+        self.__next=next_node
+

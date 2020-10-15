@@ -1,0 +1,37 @@
+def merge_list(list1, list2):
+    merged_data="";
+    temp="";
+    for n in range(len(list2),0,-1):
+        if (list2[n-1] == None):
+            pass;
+            list2.pop()
+            merged_data = list1.pop(0)
+            print(merged_data,end = ' ')
+            
+        elif(list1[0] == None):
+            pass;
+            list1.pop(0);
+            temp = list2.pop(n-1)
+            print(temp,end = ' ')
+        elif(list2[n-1] == None or list1[0] == None):
+            pass;
+            
+        else:
+            temp = list2.pop(n-1)
+            #n = list1.index(list1[n-1])
+            merged_data = list1.pop(0)
+            #merged_data = str(merged_data) + str(temp)
+            print(merged_data+temp,end = ' ')
+        
+    #write your logic here
+    #return merged_data
+
+#Provide different values for the variables and test your program
+list1=['T', 'sk', None, 'bl']
+list2=['ue', 'is', 'y', 'he']
+#merged_data=merge_list(list1,list2)
+#print(merged_data)
+merge_list(list1,list2)
+ 
+This code might not give correct output for most of the cases.
+Further update will be provided pnce I get the hang of it.

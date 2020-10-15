@@ -1,0 +1,27 @@
+ef calculate_bill_amount(gems_list, price_list, reqd_gems,reqd_quantity):
+    bill_amount=0
+    bill=[]
+    temp=0;
+    counter=0;
+    for gem in gems_list:
+        if gem in reqd_gems:
+            #bill = bill + price_list[counter];
+            bill = bill +[counter];
+        counter = counter+1;
+        
+        
+    for count in range(0,len(reqd_quantity)):
+        temp = bill[count] * reqd_quantity[count];
+        bill_amount = bill_amount + temp;
+        count = count + 1;
+        
+    return bill_amount
+
+#List of gems available in the store
+gems_list=["Emerald","Ivory","Jasper","Ruby","Garnet"]
+price_list=[1760,2119,1599,3920,3999]
+reqd_gems=["Ivory","Emerald","Garnet"]
+reqd_quantity=[3,10,12]
+
+bill_amount=calculate_bill_amount(gems_list, price_list, reqd_gems, reqd_quantity)
+print(bill_amount)

@@ -1,0 +1,24 @@
+def merge_list(list1, list2):
+    merged_data="";
+    for i in range(0,len(list1)):
+        temp1= temp2 = '';
+        temp1 = str(list1[i]);
+        temp2 = list2[(len(list1)-1)-i];
+        if(temp1 == None or temp2== None):
+            temp1==temp2=='';
+            merged_data = merged_data + temp1;
+            merged_data = merged_data + temp2;
+        else:
+            merged_data = merged_data + temp1;
+            merged_data = merged_data + temp2
+        
+        if i<len(list1)-1:
+            merged_data = merged_data + " ";
+    return merged_data
+        
+
+#Provide different values for the variables and test your program
+list1=['T', 'sk', None, 'bl']
+list2=['ue', 'is', 'y', 'he']
+merged_data=merge_list(list1,list2)
+print(merged_data)
